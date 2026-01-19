@@ -88,7 +88,7 @@ const switchToRegister = () => {
       <input
           :class="$style.InputStyle"
           type="text"
-          placeholder="검색😎"
+          placeholder="😎검색😎"
           v-model="search"
           @keyup="onEnterkeyHandler"
           @input="onSearchChangeHandler"
