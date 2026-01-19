@@ -70,15 +70,15 @@ const switchToRegister = () => {
   <div>
     <!-- Modals -->
     <LoginModal
-      v-if="loginModal"
-      @close="loginModal = false"
-      @switch-to-register="switchToRegister"
+        v-if="loginModal"
+        @close="loginModal = false"
+        @switch-to-register="switchToRegister"
     />
 
     <RegisterModal
-      v-if="registerModal"
-      @close="registerModal = false"
-      @switch-to-login="switchToLogin"
+        v-if="registerModal"
+        @close="registerModal = false"
+        @switch-to-login="switchToLogin"
     />
 
     <div :class="$style.HeaderDiv">
@@ -86,28 +86,28 @@ const switchToRegister = () => {
         OHGIRAFFERS
       </button>
       <input
-        :class="$style.InputStyle"
-        type="text"
-        placeholder="검색"
-        v-model="search"
-        @keyup="onEnterkeyHandler"
-        @input="onSearchChangeHandler"
+          :class="$style.InputStyle"
+          type="text"
+          placeholder="검색😎"
+          v-model="search"
+          @keyup="onEnterkeyHandler"
+          @input="onSearchChangeHandler"
       />
 
       <!-- Auth Buttons -->
       <div v-if="!isLogin">
         <button
-          :class="$style.HeaderBtn"
-          @click="loginModal = true"
-          style="background: none; border: none; cursor: pointer; color: inherit; text-decoration: underline;"
+            :class="$style.HeaderBtn"
+            @click="loginModal = true"
+            style="background: none; border: none; cursor: pointer; color: inherit; text-decoration: underline;"
         >
           로그인
         </button>
         |
         <button
-          :class="$style.HeaderBtn"
-          @click="registerModal = true"
-          style="background: none; border: none; cursor: pointer; color: inherit; text-decoration: underline;"
+            :class="$style.HeaderBtn"
+            @click="registerModal = true"
+            style="background: none; border: none; cursor: pointer; color: inherit; text-decoration: underline;"
         >
           회원가입
         </button>
